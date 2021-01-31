@@ -41,6 +41,7 @@ class Users extends Component {
 
   componentDidMount() {
     this.getUserData();
+    console.log(this.props);
   }
 
   render() {
@@ -54,6 +55,7 @@ class Users extends Component {
               name={name}
               username={username}
               phone={phone}
+              id={id}
             />
           );
         })}
