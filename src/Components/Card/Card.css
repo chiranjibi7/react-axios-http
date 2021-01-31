@@ -1,0 +1,24 @@
+.Card{
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+#card{
+    border: 1px solid rgb(13, 102, 153);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px  rgb(13, 102, 153);
+}
+
+#btn{
+    padding: 5px;
+    width: 20%;
+}
+
+.icon{
+    margin-right: 5px;
+}
+
+.subtitle{
+    margin-left: 23px;
+    font-style: italic;
+}
