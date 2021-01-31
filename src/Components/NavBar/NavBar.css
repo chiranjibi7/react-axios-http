@@ -1,0 +1,15 @@
+#NavBar{
+    background-color: rgb(49, 47, 47);
+    padding: 18px;
+}
+
+#HomeLink, #UsersLink{
+    color: white;
+    margin: 0px 20px;
+    font-size: 18px;
+}
+
+#HomeLink:hover, #UsersLink:hover{
+    text-decoration: underline;
+}
+
