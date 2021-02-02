@@ -1,0 +1,102 @@
+.User{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgb(13, 102, 153);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px  rgb(13, 102, 153);
+}
+
+.Upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(13, 102, 153);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    /* font-weight: bold; */
+    font-size: 50px;
+
+}
+
+.info{
+    flex: 1;
+    margin-left: 50px;
+}
+
+#name{
+    font-weight: bold;
+    margin: 0;
+}
+
+#username{
+    font-style: italic;
+    color: #aaaa;
+    margin: 0;
+    padding: 0;
+}
+
+.details{
+    
+    margin-left: 174px;
+    display: flex;
+    flex-direction: column;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.address-name{
+    font-weight: bold;
+}
+
+.company-name{
+    font-weight: bold;
+}
+
+
+.company{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.company-address-header{
+    background-color: rgb(13, 102, 153);
+    color: white;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.btnGroup{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #btn1{
+ padding: 5px;
+ width: 20%;
+}
+
+#btn2{
+    padding: 5px;
+    width: 30%;
+} */
+
