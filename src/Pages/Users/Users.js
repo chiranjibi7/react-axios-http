@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { axiosInstance } from "../../Axios";
 import CardComponent from "../../Components/Card/Card";
+import './Users.css';
+import Spinner from "../../Components/Spinner/Spinner";
+import ErrorAlert from '../../Components/ErrorAlert/ErrorAlert';
 
 class Users extends Component {
   state = {
@@ -26,39 +29,46 @@ class Users extends Component {
         website: "",
       },
     ],
+    isLoading: false,
   };
 
   getUserData = async () => {
     try {
       const userData = await axiosInstance.get("/users");
-      this.setState({
-        users: userData.data,
-      });
+        this.setState({
+          users: userData.data,
+          isLoading: false,
+        });
     } catch (error) {
       console.log(error);
     }
   };
 
   componentDidMount() {
+    this.setState({ isLoading: true });
     this.getUserData();
-    console.log(this.props);
   }
 
   render() {
-    const { users } = this.state;
+    const { users, isLoading } = this.state;
+
+    const displayUsers = ( isLoading 
+      ? <Spinner/>
+      : users.map(({ name, id, username, phone }) => {
+        return (
+          <CardComponent
+            key={id}
+            name={name}
+            username={username}
+            phone={phone}
+            id={id}
+          />
+        );
+      }));
+
     return (
-      <div style={{display: 'flex', flexWrap:"wrap",justifyContent:"space-evenly",margin: '20px 0px'}}>
-        {users.map(({ name, id, username, phone }) => {
-          return (
-            <CardComponent
-              key={id}
-              name={name}
-              username={username}
-              phone={phone}
-              id={id}
-            />
-          );
-        })}
+      <div className="Users">
+        {displayUsers}
       </div>
     );
   }
