@@ -1,0 +1,25 @@
+.Card{
+
+    width: 60%;
+    display: block;
+    margin: 20px auto;
+
+}
+
+.btnGroup{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* #btn1{
+ padding: 5px;
+ width: 20%;
+}
+
+#btn2{
+    padding: 5px;
+    width: 30%;
+} */
