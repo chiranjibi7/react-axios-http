@@ -1,0 +1,19 @@
+.Trending{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    background-color:black;
+}
+
+ .heading{
+    background-color: black;
+}
+
+.label{
+    margin-left: 30px;
+    /* padding: 10px; */
+    color: white;
+    font-size: 25px;
+    border: 1px solid white;
+} 
