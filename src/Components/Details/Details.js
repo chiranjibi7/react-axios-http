@@ -1,11 +1,10 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import {useParams} from 'react-router-dom';
-import {axiosInstance,API_KEY} from '../../config';
+
+import React from 'react';
+
 
 const Details = (props) => {
 
-  const {mediaType, mediaId}= useParams();
+
   
     return (
        <div>

@@ -5,7 +5,7 @@ const CardComponent = ({imgURL,path,title}) => {
 
     return (
      <div className="Card">
-                <img src={`${imgURL}/${path}`} height="300px" width="220px"/>
+                <img src={`${imgURL}/${path}`} height="300px" width="220px" alt="card img"/>
                 <p id="title">{title}</p>
               </div>
         ); 
