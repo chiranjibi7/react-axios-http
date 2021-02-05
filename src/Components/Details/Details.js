@@ -8,7 +8,7 @@ const Details = (props) => {
   
     return (
        <div>
-            hi
+            Loading..
         </div>
     )
 }
