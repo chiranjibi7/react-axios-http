@@ -19,7 +19,7 @@ const NavbarComponent = (props) => {
 
   return (
     <div>
-      <Navbar color="dark" dark expand="md">
+      <Navbar color="transparent" dark expand="md" fixed="top">
         <NavbarBrand tag={Link}  to="/" style={{color:'white'}}>MovieAPI</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
