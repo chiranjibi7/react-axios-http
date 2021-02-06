@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Card.css";
 
-const CardComponent = ({imgURL,path,title,type}) => {
+const CardComponent = ({imgURL,path,title}) => {
 
     return (
      <div className="Card">

@@ -36,7 +36,7 @@ const Example = ({movies}) => {
         onExited={() => setAnimating(false)}
         key={movie.id}
       >
-        <img height="600px" width="100%" src={`${IMAGE_URL}/${movie.backdrop_path}`}/>
+        <img height="600px" width="100%" src={`${IMAGE_URL}/${movie.backdrop_path}`} alt="carousel img"/>
         <CarouselCaption  captionHeader={movie.title} captionText={movie.overview}/>
       </CarouselItem>
     );
