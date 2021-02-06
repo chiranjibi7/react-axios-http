@@ -27,7 +27,7 @@ const Details = () => {
 
   useEffect(() => {
     getDetails();
-  }, [mediaType,mediaId]);
+  }, [getDetails]);
 
   
     return (
