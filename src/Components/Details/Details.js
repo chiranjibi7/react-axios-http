@@ -25,21 +25,24 @@ const Details = () => {
   //   }
   // }
 
-  const getDetails= useCallback(async()=>{
-    try {
-      const fetchedDetails= await axiosInstance({
-        method:'GET',
-        url:`/${mediaType}/${mediaId}`,
-        params: {
-          api_key: API_KEY
-        }
-      });
-      console.log(fetchedDetails.data);
-      setDetails(fetchedDetails.data)
-    } catch (error) {
-      console.log(error);
-    }
-  }); 
+  const getDetails= useCallback(
+    async()=>{
+      try {
+        const fetchedDetails= await axiosInstance({
+          method:'GET',
+          url:`/${mediaType}/${mediaId}`,
+          params: {
+            api_key: API_KEY
+          }
+        });
+        console.log(fetchedDetails.data);
+        setDetails(fetchedDetails.data)
+      } catch (error) {
+        console.log(error);
+      }
+    },
+    [mediaType,mediaId],
+  )
 
   useEffect(() => {
     getDetails();
