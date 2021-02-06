@@ -3,6 +3,7 @@ import Card from "../../Components/Card/Card";
 import "./Home.css";
 import { API_KEY, IMAGE_URL, axiosInstance } from "../../config";
 import {Link} from 'react-router-dom';
+import Carousel from '../../Components/Carousel/Carousel';
 
 const Home = () => {
   
@@ -18,6 +19,7 @@ const Home = () => {
           api_key: API_KEY,
         },
       });
+      console.log(trendingMoviesList.data.results);
       setTrendingMovies(trendingMoviesList.data.results);
       const trendingTvshowsList = await axiosInstance({
         method: "GET",
@@ -41,32 +43,33 @@ const Home = () => {
 
   const displayTrendingMovies= trendingMovies.map((movie) => {
     return (
-      <Link to={`/${movie.media_type}/${movie.id}`}><Card
+      <Link to={`/${movie.media_type}/${movie.id}`} key={movie.id} style={{textDecoration:'none'}}><Card
           imgURL={IMAGE_URL}
           path={movie.poster_path}
           title={movie.title || movie.name}
           type={movie.media_type}
           overview={movie.overview}
-          key={movie.id}
         /></Link>
     );
   });
 
   const displayTrendingTvShows= trendingTvShows.map((tv) => {
     return (
-      <Link to={`/${tv.media_type}/${tv.id}`}><Card
+      <Link to={`/${tv.media_type}/${tv.id}`} key={tv.id} style={{textDecoration:'none'}}><Card
           imgURL={IMAGE_URL}
           path={tv.poster_path}
           title={tv.title || tv.name}
           type={tv.media_type}
           overview={tv.overview}
-          key={tv.id}
         /></Link> 
     );
   });
 
   return(
-      <div style={{backgroundColor:"black"}}>
+      <div className="Home">
+        <div>
+          <Carousel movies={trendingMovies.filter(movie=> movie.vote_average >=7.3)}/>
+        </div>
       <p className="label">Trending Movies</p>
       <div className="Trending">
           {displayTrendingMovies}

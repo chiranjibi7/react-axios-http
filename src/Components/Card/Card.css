@@ -1,9 +1,9 @@
 .Card{
     width: 220px;
-    border: 1px solid black;
+    border: none;
     border-radius: 5px;
     margin: 20px;
-    color: white;
+    color: rgba(255,255,255,0.8);
 }
 
 .Card img{
@@ -13,7 +13,10 @@
 
 #title{
     font-weight: bold;
-    font-size: 15px;
-    margin-top: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+
 }
+
 

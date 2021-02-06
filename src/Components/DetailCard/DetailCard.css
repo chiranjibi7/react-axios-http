@@ -1,0 +1,32 @@
+.Detail{
+    display: flex;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 40px;
+    color: rgba(246, 235, 235, 0.6);
+    background-color: rgb(31, 30, 30);
+}
+
+.detail-section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.detail-section h2{
+    color: rgba(255,255,255,0.9);
+}
+
+.rating{
+    display: flex;
+    font-size: 14px;
+}
+
+.rating>p{
+    margin-right: 40px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}

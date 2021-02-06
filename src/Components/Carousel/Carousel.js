@@ -8,7 +8,6 @@ import {
 } from 'reactstrap';
 import {IMAGE_URL} from '../../config';
 
-
 const Example = ({movies}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
@@ -37,8 +36,8 @@ const Example = ({movies}) => {
         onExited={() => setAnimating(false)}
         key={movie.id}
       >
-        <img src={`${IMAGE_URL}/${movie.poster_path}`}/>
-        <CarouselCaption captionText={movie.title} captionHeader={movie.title} />
+        <img height="600px" width="100%" src={`${IMAGE_URL}/${movie.backdrop_path}`}/>
+        <CarouselCaption  captionHeader={movie.title} captionText={movie.overview}/>
       </CarouselItem>
     );
   });
